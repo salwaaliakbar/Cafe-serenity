@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<body>
+    <div class="pic">
+    <header>
+        <nav>
+            <div class="logo">Cafe Serenity</div>
+            <ul>
+                <li><b><a href="index.html">Home</a></b></li>
+                <li><b><a href="about.html">About</a></b></li>
+                <li><b><a href="Menu.html">Menu</a></b></li>
+                <li><b><a href="cart.html">Cart</a></b></li>
+                <li><b><a href="order.html">Orders</a></b></li>
+                <li><b><a href="contact.html">ContactUs</a></b></li>
+                <button class="loginbutton" id="loginLogoutButton"><b><a href="login.html">Login</a></b></button>
+            </ul>
+        </nav> 
+    </header>
+    <main class="contactmain">
+        <div class="borderdark">
+            <div class="heading"><b>Contact Us</b></div><br>
+            <form id="ContactForm">
+            <input type="text" id="name" placeholder="Full Name" required><br>
+            <input type="text" id="phone" placeholder="Phone No" required><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            <textarea id="msg" placeholder="Write your Message"></textarea>
+            <button type="submit" class="button"><b>Sent Message</b></button>
+            </form>
+            <div class="message" id="message">Message Sent successfully!</div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</div>
+<footer class="footerbar">
+    <div class="contactinfo">
+        <h2 class="footergoldcolor">Contact Info</h2><br>
+        <img class="image" src="phone1.jpg"> +012 456 45678<br><br>
+        <img class="image" src="mail.jpg"> cafeserenity345@gmail.com<br><br>
+        <img class="icons" src="twitterbrown.png"><img class="icons" src="facebookbrown.png"><img class="icons" src="youtubebrown.png"><img class="icons" src="linkdlenbrown.png"></span>
+    </div>
+    <div class="quickLink">
+        <h2 class="footergoldcolor">Quick Link</h2><br>
+        <li><b><a href="index.html">Home</a></b></li>
+                <li><b><a href="about.html">About</a></b></li>
+                <li><b><a href="Menu.html">Menu</a></b></li>
+                <li><b><a href="contact.html">ContactUs</a></b></li>
+                <li><b><a href="login.html">Login</a></b></li>
+    </div>
+</footer>
+</body>
+</html>

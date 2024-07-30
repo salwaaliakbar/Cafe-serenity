@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="indexmain" id="headerpic">
+        <nav>
+            <div class="logo">Cafe Serenity</div>
+            <ul>
+                <li><b><a href="index.html">Home</a></b></li>
+                <li><b><a href="about.html">About</a></b></li>
+                <li><b><a href="Menu.html">Menu</a></b></li>
+                <li><b><a href="cart.html">Cart</a></b></li>
+                <li><b><a href="order.html">Orders</a></b></li>
+                <li><b><a href="contact.html">ContactUs</a></b></li>
+                <button class="loginbutton" id="loginLogoutButton"><b><a href="login.html">Login</a></b></button>
+            </ul>
+        </nav>
+        <div class="text">
+                <h1 class="goldcolor">Taste at Cafe Serenity</h1><br>
+                <h4>Experience tranquility and taste at Cafe Serenity, <br>
+                    your haven for exquisite coffee and delightful treats.</h4>
+        
+                <button class="Explorebutton"><b><a href="explore.html">Learn More</a></b></button>
+            </div>
+    </header>
+    <main class="main">
+        <div class="WelcomeText">
+           <h1>Welcome to Cafe Serenity</h1><br>
+            <p>A peaceful retreat where you can unwind and savor the finest coffee<br>
+            and delectable treats. Nestled in the heart of the city, our cafe <br>
+            is designed to offer a tranquil ambiance, making it the perfect spot <br>
+            for relaxation and rejuvenation. Whether you're catching up with <br>
+            friends,enjoying a quiet moment alone, or working on your latest <br>
+            project, Cafe Serenity is your sanctuary of calm and comfort. Join <br>
+            us and experience the perfect blend of tranquility and taste.</p>
+        </div>
+        <div class="cupimage">
+            <img src="images/cup.jpg">
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const headerPic = document.getElementById("headerpic");
+                const images = ["images/frontpage.jpeg", "images/caffeebeam.png"];
+                let currentImageIndex = 0;
+        
+                const preloadImages = (srcs, callback) => {
+                    let loadedImages = 0;
+                    const totalImages = srcs.length;
+                    srcs.forEach(src => {
+                        const img = new Image();
+                        img.src = src;
+                        img.onload = () => {
+                            loadedImages++;
+                            if (loadedImages === totalImages) {
+                                callback();
+                            }
+                        };
+                    });
+                };
+        
+                const switchImage = () => {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    headerPic.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+                    setTimeout(switchImage, 2000);
+                };
+        
+                preloadImages(images, () => {
+                    headerPic.style.backgroundImage = `url('${images[0]}')`;
+                    setTimeout(switchImage, 2000);
+                });
+            });
+        </script>
+        
+       <script src="script.js"></script>
+    </main>
+    
+    <footer class="footerbar">
+        <div class="contactinfo">
+            <h2 class="footergoldcolor">Contact Info</h2><br>
+            <img class="image" src="images/phone1.jpg"> +012 456 45678<br><br>
+            <img class="image" src="images/mail.jpg"> cafeserenity345@gmail.com<br><br>
+            <img class="icons" src="twitterbrown.png"><img class="icons" src="images/facebookbrown.png"><img class="icons" src="images/youtubebrown.png"><img class="icons" src="images/linkdlenbrown.png"></span>
+        </div>
+        <div class="quickLink">
+            <h2 class="footergoldcolor">Quick Link</h2><br>
+            <li><b><a href="index.html">Home</a></b></li>
+                    <li><b><a href="about.html">About</a></b></li>
+                    <li><b><a href="Menu.html">Menu</a></b></li>
+                    <li><b><a href="contact.html">ContactUs</a></b></li>
+                    <li><b><a href="login.html">Login</a></b></li>
+        </div>
+    </footer>
+</body>
+</html>
